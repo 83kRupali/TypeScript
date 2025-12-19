@@ -4,13 +4,13 @@ import { useTodos } from "../store/todos";
 
 const AddTodo = () => {
   const [task, setTask] = useState("");
-  const { addTodo } = useTodos();
+  const { handleAddToDo } = useTodos();
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!task.trim()) return;
 
-    addTodo(task);
+    handleAddToDo(task);
     setTask("");
   };
 
